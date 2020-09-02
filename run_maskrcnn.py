@@ -1,6 +1,6 @@
 from model_maskrcnn import MaskRCNN
 
-path_to_weights = "path_to_weights" # Required when doing predictions
+path_to_weights = None # Required when doing predictions
 path_to_images = "path_to_train_images\\"
 path_to_masks = "path_to_train_masks\\"
 path_to_test_images = "path_to_test_images\\"
