@@ -48,7 +48,7 @@ torchvision==0.5.0+cu92
 ### Results
 
 #### Segmentation Models 
-Model Name | Validation Loss 
+Model Name | Validation IoU 
 --- | --- |
 UNet | 0.94 |
 MaskRCNN | 0.72 |
