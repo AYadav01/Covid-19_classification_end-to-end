@@ -34,15 +34,15 @@ torchvision==0.5.0+cu92
 
 * **Loss function For MaskRCNN**: Pixel-wise Binary Cross Entropy
 * **Loss function For UNet**: Binary Cross Entropy + Soft Dice + Inverted Soft Dice
-* **Optimizers**: Adam (UNet, Resnet18), SGD (MaskRCNN, MLP)
-* **Epochs**: 100 (MaskRCNN, UNet), 200 (Resnet18), 500 (MLP)
+* **Optimizers**: Adam (**UNet**, **Resnet18**), SGD (**MaskRCNN**, **MLP**)
+* **Epochs**: 100 (**MaskRCNN**, **UNet**), 200 (**Resnet18**), 500 (**MLP**)
 * **Learning Rate**: 0.001 (reduces 1/10 if validation loss does not increase for 5 epochs) 
 
 ## Loss Graph
-#### UNet | MaskRCNN
+##### UNet | MaskRCNN
 ![Alt text](logs/train_losses.png?raw=true "Title")
 
-#### Resnet18 | MLP (Radiomics only) | MLP (Radiomis + Metadata)
+##### Resnet18 | MLP (Radiomics only) | MLP (Radiomis + Metadata)
 ![Alt text](logs/clf_losses.png?raw=true "Title")
 
 ### Results
@@ -88,3 +88,12 @@ Accuracy | 0.86 | 0.84 | 0.96 |
 Sensitivity | 0.81 | 0.80 | 0.87 |
 Specificity | 0.88 | 0.86 | 1.0 |
 Precision | 0.76 | 0.75 | 1.0 |
+
+#### ROC-AUC
+##### Resnet18 | MLP (Radiomics only) | MLP (Radiomics with metadata)
+![Alt text](logs/aucs.png?raw=true "Title")
+
+### Conclusion
+
+* Deep learning model has outperformed the traditional MLP model when using radiomics information alone, however, with the additional metadata information added to the radiomic features, the MLP model performance seems comparable with that of deep model. 
+The models are yet to be implemented with a cross validation to determine if the performance is consistent across folds.
