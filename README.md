@@ -40,13 +40,10 @@ torchvision==0.5.0+cu92
 
 ## Loss Graph
 #### UNet | MaskRCNN
-![Alt text](logs/train_losses_unet.png?raw=true "Title")
-![Alt text](logs/mask_rcnn_train_loss.png?raw=true "Title")
+![Alt text](logs/train_losses.png?raw=true "Title")
 
 #### Resnet18 | MLP (Radiomics only) | MLP (Radiomis + Metadata)
-![Alt text](logs/resnet18_losses.png?raw=true "Title")
-![Alt text](logs/mlp_radiomics_only.png?raw=true "Title")
-![Alt text](logs/mlp_radiomics_with_metadata.png?raw=true "Title")
+![Alt text](logs/clf_losses.png?raw=true "Title")
 
 ### Results
 
@@ -61,16 +58,10 @@ MaskRCNN | 0.72 |
 #### Predictions
 
 ##### MaskRCNN (Image with GT Bbox, GT mask, Image with Predicted Bbox, Predicted Mask)
-![Alt text](logs/sample_xray.png?raw=true "Title")
-![Alt text](logs/gt_mask_1.png?raw=true "Title")
-![Alt text](logs/sample_xray_predicted_bbox.png?raw=true "Title")
-![Alt text](logs/predicted_mask_maskrcnn.png?raw=true "Title")
+![Alt text](logs/maskrcnn_predictions.png?raw=true "Title")
 
 ##### UNet (Image , GT mask, Predicted Mask)
-![Alt text](logs/sample_xray_2.png?raw=true "Title")
-![Alt text](logs/gt_mask_2.png?raw=true "Title")
-![Alt text](logs/predicted_mask_unet.png?raw=true "Title")
-
+![Alt text](logs/unet_predictions.png?raw=true "Title")
 
 #### Classifiction Models 
 
